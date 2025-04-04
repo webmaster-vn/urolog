@@ -1,5 +1,12 @@
 body {
     font-family: "Roboto Slab", serif;
+    width: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 /* =========================    HEADER    ============================== */
@@ -14,6 +21,7 @@ body {
     left: 0;
     z-index: 50;
     background-color: #1A90F0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
   
 .header:before {
@@ -25,10 +33,9 @@ body {
     height: 95px;
     background-color: #ffffff;
     z-index: 2;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.container {
+.header-container {
     max-width: 1280px;
     margin: 0px auto;
     padding: 0px 20px;
@@ -57,7 +64,7 @@ body {
 .header-contacts_img {
     width: 20px;
     height: 20px;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 .header-contacts_link {
@@ -70,27 +77,27 @@ body {
     color: #ffffff;
 }
 
-.lang-container {
+.lang-container_list {
     display: flex;
     background-color: #ffffff;
     border-radius: 25px;
     padding: 3px;
 }
 
-.lang-icon {
+.lang-icon_item {
     margin-right: 10px;
 }
 
-.lang-icon:last-child {
+.lang-icon_item:last-child {
     margin-right: 0px;
 }
 
-.lang-img {
+.lang-icon_img {
     width: 30px;
     height: 30px;
 }
   
-.header__body {
+.header_body {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -98,21 +105,21 @@ body {
     align-items: center;
 }
   
-.header__logo {
+.header_logo {
     flex: 0 0 100px;
     position: relative;
     z-index: 3;
 }
   
-.header__logo img {
+.header_logo img {
     width: 300px;
 }
   
-.header__burger {
+.header_burger {
     display: none;
 }
 
-.header__list {
+.header_list {
     display: flex;
     align-items: center;
     position: relative;
@@ -120,12 +127,12 @@ body {
     padding-left: 0;
 }
   
-.header__list li {
+.header_list li {
     list-style: none;
     margin: 0 0 0 60px;
 }
   
-.header__link {
+.header_link {
     font-family: "Roboto Slab", serif;
     font-size: 16px;
     font-weight: 600;
@@ -135,10 +142,500 @@ body {
     color: #000000;
 }
 
-.header__link {
+.header_link {
     &:hover, 
-    &:focus {
+    &:focus,
+    &:active {
         color: #1A90F0;
         transition: all 0.3s ease-out;
     }
 }
+
+.lang-container_mobile {
+    display: none;
+}
+
+
+/* =========================    HERO    ============================== */
+.hero {
+    margin-top: 149px;
+    background-color: #edeff1;
+}
+
+.hero_container {
+    max-width: 1280px;
+    margin: 0px auto;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-img_container {
+    width: 600px;
+    height: 500px;
+    background-image: url(../img/hero-img.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 50%;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hero_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    line-height: 1.1;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.hero_title span {
+    color: #1A90F0;
+}
+
+.hero_subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    line-height: normal;
+    color: #5a5a5a;
+    margin-bottom: 40px;
+}
+
+.feedback-btn {
+    background-color: #1A90F0;
+    padding: 25px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.feedback-btn {
+    &:hover, 
+    &:focus {
+        background-color: #00D4DA;
+        transition: all 0.3s ease-out;
+    }
+}
+
+
+/* =========================    ABOUT    ============================== */
+.about_container {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+	display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.about-desc_container div {
+    display: block;
+    height: 520px;
+    overflow-y: scroll;
+}
+
+
+
+.about_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    margin-bottom: 40px;
+    color: #000000;
+    text-align: center;
+}
+
+.about_desc {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    line-height: normal;
+    text-align: ustify;
+    padding-bottom: 15px;
+    color: #5a5a5a;
+}
+
+.about_desc:last-of-type {
+    padding-bottom: 0;
+}
+
+.about_img {
+    height: 600px;
+    border-radius: 25px;
+    margin-right: 60px;
+}
+
+
+/* =========================    ADVENTAGES    ============================== */
+.adventages {
+    background-color: #edeff1;
+}
+
+.adventages_container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.advantages-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.advantages-item {
+    width: 600px;
+    text-align: start;
+}
+
+.adventages_img {
+    width: 45px;
+    padding-bottom: 20px;
+}
+
+.advantages-item_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+.advantages-item_desc {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: normal;
+    color: #5a5a5a;
+}
+
+
+/* =========================    REWIEVS    ============================== */
+.rewievs_container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+    outline: 1px solid red;
+}
+
+.rewievs_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    padding-bottom: 40px;
+    color: #000000;
+}
+
+.rewievs-slider {
+    min-width: 0;
+    position: relative;
+    padding: 0px 60px;
+    text-align: center;
+}
+
+.rewievs-slider_item {
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #00D4DA;
+    text-align: start;
+    /* margin-right: 30px; */
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 12px; */
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.rewievs-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -18px 0px 0px 0px;
+    z-index: 10;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.rewievs-slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url(../img/icon-shevron-left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
+
+.rewievs-slider .slick-arrow.slick-next {
+    right: 0;
+}
+
+.rewievs-slider_subtitle {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+.rewievs-slider_desc {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: normal;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* =========================    FEEDBACK    ============================== */
+.feedback {
+    background-color: #edeff1;
+}
+
+.feedback_container {
+	max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.feedback_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    padding-bottom: 20px;
+    color: #000000;
+}
+
+.feedback_desc {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    padding-bottom: 50px;
+    color: #5a5a5a;
+}
+
+.feedback-btn {
+    background-color: #1A90F0;
+    padding: 25px 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.feedback-btn {
+    &:hover, 
+    &:focus {
+        background-color: #00D4DA;
+        transition: all 0.3s ease-out;
+    }
+}
+
+
+/* =========================    FOOTER    ============================== */
+.footer {
+    background-color: #353738;
+}
+
+.footer_container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.logo-txt {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    color: #0095eb;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+.logo-txt span {
+    font-size: 15px;
+    font-weight: 400;
+    color: #979799;
+    text-decoration: none;
+}
+
+.logo-txt_list {
+    list-style: disc;
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+.logo-txt_item p {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.footer-nav {
+   padding-left: 300px;
+}
+
+.footer-nav_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    color: #1A90F0;
+    padding-bottom: 25px;
+}
+
+.footer-nav_list {
+    list-style: none;
+}
+
+.footer-nav_link {
+    display: block;
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.footer-nav_link {
+    &:hover, 
+    &:focus {
+        color: #00D4DA;
+        transition: all 0.3s ease-out;
+    }
+}
+
+.contacts-list {
+    list-style: none;
+}
+
+.contacts-item {
+    text-align: start;
+    padding-bottom: 25px;
+}
+
+.contacts-item:last-of-type {
+    padding-bottom: 0;
+}
+
+.contacts-item_title {
+    font-family: "Roboto Slab", serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    color: #1A90F0;
+}
+
+.contacts-item_desc {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: normal;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.copyright {
+    background-color: #1A90F0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.copyright_txt {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* .form {
+    margin-top: 200px;
+}
+
+.succes {
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    line-height: 1;
+    text-decoration: none;
+    color: #000000;
+    margin-top: 30px;
+}
+
+.disp {
+    display: none;
+} */
